@@ -17,10 +17,10 @@ module.exports = [
 		test: /\.css$/,
 		use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
 	},
-	// {
-	// 	test: /\.s[ac]ss$/i,
-	// 	use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
-	// },
+	{
+		test: /\.s[ac]ss$/i,
+		use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
+	},
 	{
 		test: /\.(gif|jpe?g|tiff|png|webp|bmp|svg|eot|ttf|otf|woff|woff2)$/i,
 		type: 'asset',

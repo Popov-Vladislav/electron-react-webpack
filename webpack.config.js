@@ -1,7 +1,9 @@
+const path = require('path');
+
 module.exports = {
 	mode: 'development',
 	entry: {
-		electron: '../../src/electron/index.ts',
+		web: './src/app/index.tsx',
 	},
 	output: {
 		filename: '[name].[contenthash:8].bundle.js',
@@ -11,12 +13,13 @@ module.exports = {
 	devServer: {
 		static: './dist',
 	},
+	plugins: [...require('./tools/webpack/webpack.plugins')],
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
-		alias: require('./webpack.aliases'),
+		alias: require('./tools/webpack/webpack.aliases'),
 	},
 	module: {
-		rules: require('./webpack.rules'),
+		rules: require('./tools/webpack/webpack.rules'),
 	},
 	stats: 'minimal',
 };

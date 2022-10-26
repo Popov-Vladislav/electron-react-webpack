@@ -5,6 +5,10 @@ function inDev() {
 	return process.env.NODE_ENV == 'development';
 }
 
+function inWeb() {
+	return process.env.APP_ENV == 'web';
+}
+
 function createWebpackAliases(aliases) {
 	const result = {};
 	for (const name in aliases) {
@@ -15,5 +19,6 @@ function createWebpackAliases(aliases) {
 
 module.exports = {
 	inDev,
+	inWeb,
 	createWebpackAliases,
 };
