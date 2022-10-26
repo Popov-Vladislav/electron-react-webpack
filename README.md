@@ -1,6 +1,6 @@
 # electron-react-webpack
 
-run 
+Чтобы запустить обычное веб-приложение запустите команду:
 `
-yarn add
+yarn start
 `
