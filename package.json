@@ -5,14 +5,21 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development --hot",
     "build": "webpack --mode production",
-    "eslint": "eslint ./ --ext .ts,.js,.tsx",
-    "eslint-fix": "eslint ./ --ext .ts,.js,.tsx --fix"
+    "eslint": "eslint --ext .ts,.tsx",
+    "eslint-fix": "eslint --ext .ts,.tsx --fix",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write",
       "eslint"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
   },
   "dependencies": {
@@ -37,6 +44,7 @@
     "fork-ts-checker-webpack-plugin": "^7.2.13",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "mini-css-extract-plugin": "^2.6.1",
     "node-loader": "^2.0.0",
     "prettier": "^2.7.1",
