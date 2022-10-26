@@ -1,5 +1,3 @@
-import './App.css';
-
 import React, { ReactElement } from 'react';
 import { createRoot } from 'react-dom/client';
 
