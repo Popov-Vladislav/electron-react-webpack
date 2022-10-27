@@ -8,6 +8,9 @@ const { inDev, inWeb } = require('./webpack.helpers');
 
 module.exports = [
 	new ForkTsCheckerWebpackPlugin(),
+	new webpack.DefinePlugin({
+		'process.env.APP_ENV': JSON.stringify(process.env.APP_ENV),
+	}),
 	inDev() && new webpack.HotModuleReplacementPlugin(),
 	inDev() && new ReactRefreshWebpackPlugin(),
 	inWeb() && new CleanWebpackPlugin(),

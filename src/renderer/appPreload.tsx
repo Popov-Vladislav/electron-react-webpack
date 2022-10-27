@@ -1,8 +1,3 @@
-import '@misc/window/windowPreload';
-
-// Say something
-console.log('[ERWT] : Preload execution started');
-
 // Get versions
 window.addEventListener('DOMContentLoaded', () => {
 	const app = document.getElementById('root');
